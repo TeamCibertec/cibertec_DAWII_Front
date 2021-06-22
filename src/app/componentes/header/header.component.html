@@ -1,0 +1,79 @@
+<header class="topbar" style="background-color: cornflowerblue;padding: 10px;">
+    <nav class="navbar top-navbar navbar-expand-lg navbar-light">
+        <div class="navbar-header">
+            <ul class="navbar-nav mr-auto fadeInRight">
+                <!-- This is  -->
+                <li class="nav-item ">
+                    <a class="nav-link waves-effect waves-dark"></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link nav-toggler hidden-md-up " href="javascript:void(0)" style="padding: 0px 15px;">
+                        <i name="menu" style="margin-top: 12px;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link sidebartoggler hidden-sm-down " href="javascript:void(0)" style="padding: 0px 15px;"></a>
+                </li>
+                <li class="nav-item hidden-sm-down"></li>
+            </ul>
+        </div>
+
+        <div class="navbar-collapse">
+            <ul class="navbar-nav mr-auto fadeInRight hhe">
+                <!-- This is  -->
+                <li>
+                    <img src="assets/img/loguito.png" style="margin-left: 45px;">
+                </li>
+                <li class="nav-item dropdown" style="text-transform: uppercase;margin-top: 10px;">
+                    <b><a class="nav-link dropdown-toggle" style="font-size: 18px;">Banco CiberBoot</a></b>
+                </li>
+            </ul>
+
+            <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+                <div class="form-group mb-0">
+                    <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Search" type="text">
+                    </div>
+                </div>
+            </form>
+            <!-- User -->
+
+            <ul class="navbar-nav align-items-center d-none d-md-flex">
+                <li class="nav-item" ngbDropdown placement="bottom-right">
+                    <a class="nav-link pr-0" role="button" ngbDropdownToggle>
+                        <div class="media align-items-center">
+                            <span class="avatar avatar-sm rounded-circle">
+                <img alt="Image" src="assets/img/login.png">
+              </span>
+                            <div class="media-body ml-2 d-none d-lg-block">
+                                <span class="mb-0 text-sm  font-weight-bold">Administrador</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu-arrow dropdown-menu-right" ngbDropdownMenu>
+                        <div class=" dropdown-header noti-title">
+                            <h6 class="text-overflow m-0">Bienvenido!</h6>
+                        </div>
+                        <a routerLinkActive="active" [routerLink]="['/user-profile']" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            <span>Mi Perfil</span>
+                        </a>
+                        <a routerLinkActive="active" [routerLink]="['/user-profile']" class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Configuración</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Cerrar Sesión</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

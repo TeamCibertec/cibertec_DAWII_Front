@@ -1,0 +1,58 @@
+<br>
+<br>
+<div>
+<div class="row page-titles" style="background: transparent;">
+    <div class="col-md-12 align-self-center">
+        <ol class="breadcrumb" style="font-size: 21px;">
+            <li class="breadcrumb-item">
+                <a href="javascript:void(0)">Préstamo</a>
+            </li>
+        </ol>
+    </div>
+</div>
+
+
+<div style="padding-left:25px ;">
+    <div class="d-flex">
+        <div class="col-6" style="padding: 0;">
+            <div class="d-flex">
+                <div>
+                    <button mat-raised-button class="btn btn-success" type="button" (click)="openModals(null,1)">Nuevo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class=table-responsive style="opacity: 0.9; border-radius: 15px; box-shadow: 2px 1px 26px 0px rgba(0,0,0,0.35);">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">CÓDIGO</th>
+                    <th scope="col">DESCRIPCION</th>
+                    <th scope="col">PLAZO DESTINO</th>
+                    <th scope="col">FECHA INCIO</th>
+                    <th scope="col">FECHA FIN</th>
+                    <th scope="col">SOLICITUD</th>
+                    <th scope="col">ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let obj of lista">
+                    <td>{{obj.id}}</td>
+                    <td>{{obj.descripcion}}</td>
+                    <td>{{obj.plazo}}</td>
+                    <td>{{obj.inicio}}</td>
+                    <td>{{obj.fin}}</td>
+                    <td>{{obj.solicitud}}</td>
+                    <td>
+                        <button mat-raised-button class="btn btn-info waves-effect waves-light btn-sm" type="button" (click)="openModals(obj, 2)">Editar</button>
+                        <button mat-raised-button class="btn btn-danger waves-effect waves-light btn-sm" type="button" (click)="eliminar(obj)">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
